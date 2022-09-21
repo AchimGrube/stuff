@@ -3,7 +3,7 @@ public class DelegateCommand : ICommand
   private readonly Action<object> _execute;
   private readonly Predicate<object> _canExecute;
   
-  public evene EventHandler CanExecuteChanged;
+  public event EventHandler CanExecuteChanged;
   
   public DelegateCommand(Predicate<object> canExecute, Action<object> execute) => (canExecute, execute) = (_canExecute, _execute);
   
