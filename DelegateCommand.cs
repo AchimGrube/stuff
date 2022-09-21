@@ -13,3 +13,4 @@ public class DelegateCommand : ICommand
   public bool Execute(object parameter) => _execute?.Invoke(parameter);
   
   public void RaiseCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+}
